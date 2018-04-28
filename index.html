@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
 
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <html>
 <script type="text/javascript">
     function copy(e) {
@@ -23,7 +35,7 @@
 
         document.body.removeChild(textArea);
     }
-    
+
     function showMessage(text) {
         var x = document.getElementById("snackbar");
         x.innerHTML = text;
@@ -105,61 +117,81 @@
 </style>
 
 <body>
-    <div class="w3-row">
-        <div class="w3-quarter w3-center" style="background:#000000" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#FFFFFF">#000000</p>
-        </div>
-        <div class="w3-quarter w3-center" style="background:#111111" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#FFFFFF">#111111</b>
-            </p>
-        </div>
-        <div class="w3-quarter w3-center" style="background:#222222" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#FFFFFF">#222222</p>
-        </div>
-        <div class="w3-quarter w3-center" style="background:#333333" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#FFFFFF">#333333</p>
-        </div>
-    </div>
-    <div class="w3-row">
-        <div class="w3-quarter w3-center" style="background:#444444" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#FFFFFF">#444444</p>
-        </div>
-        <div class="w3-quarter w3-center" style="background:#555555" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#FFFFFF">#555555</p>
-        </div>
-        <div class="w3-quarter w3-center" style="background:#666666" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#FFFFFF">#666666</p>
-        </div>
-        <div class="w3-quarter w3-center" style="background:#777777" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#FFFFFF">#777777</p>
-        </div>
-    </div>
-    <div class="w3-row">
-        <div class="w3-quarter w3-center" style="background:#888888" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#000000">#888888</p>
-        </div>
-        <div class="w3-quarter w3-center" style="background:#999999" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#000000">#999999</p>
-        </div>
-        <div class="w3-quarter w3-center" style="background:#AAAAAA" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#000000">#AAAAAA</p>
-        </div>
-        <div class="w3-quarter w3-center" style="background:#BBBBBB" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#000000">#BBBBBB</p>
-        </div>
-    </div>
-    <div class="w3-row">
-        <div class="w3-quarter w3-center" style="background:#CCCCCC" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#000000">#CCCCCC</p>
-        </div>
-        <div class="w3-quarter w3-center" style="background:#DDDDDD" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#000000">#DDDDDD</p>
-        </div>
-        <div class="w3-quarter w3-center" style="background:#EEEEEE" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#000000">#EEEEEE</p>
-        </div>
-        <div class="w3-quarter w3-center" style="background:#FFFFFF" onclick="copy(this)">
-            <p class="w3-xxlarge" style="color:#000000">#FFFFFF</p>
+    <div class="container">
+        <div class="col-xs-12">
+            <ul class="collapsible popout" data-collapsible="expandable">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">
+                            <i class="material-icons">color_lens</i>
+                        </i>Black and White</div>
+                    <div class="collapsible-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <div class="w3-quarter w3-center" style="background:#000000" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#FFFFFF">#000000</p>
+                                        </div>
+                                        <div class="w3-quarter w3-center" style="background:#111111" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#FFFFFF">#111111</b>
+                                            </p>
+                                        </div>
+                                        <div class="w3-quarter w3-center" style="background:#222222" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#FFFFFF">#222222</p>
+                                        </div>
+                                        <div class="w3-quarter w3-center" style="background:#333333" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#FFFFFF">#333333</p>
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="w3-quarter w3-center" style="background:#444444" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#FFFFFF">#444444</p>
+                                        </div>
+                                        <div class="w3-quarter w3-center" style="background:#555555" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#FFFFFF">#555555</p>
+                                        </div>
+                                        <div class="w3-quarter w3-center" style="background:#666666" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#FFFFFF">#666666</p>
+                                        </div>
+                                        <div class="w3-quarter w3-center" style="background:#777777" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#FFFFFF">#777777</p>
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="w3-quarter w3-center" style="background:#888888" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#000000">#888888</p>
+                                        </div>
+                                        <div class="w3-quarter w3-center" style="background:#999999" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#000000">#999999</p>
+                                        </div>
+                                        <div class="w3-quarter w3-center" style="background:#AAAAAA" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#000000">#AAAAAA</p>
+                                        </div>
+                                        <div class="w3-quarter w3-center" style="background:#BBBBBB" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#000000">#BBBBBB</p>
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="w3-quarter w3-center" style="background:#CCCCCC" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#000000">#CCCCCC</p>
+                                        </div>
+                                        <div class="w3-quarter w3-center" style="background:#DDDDDD" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#000000">#DDDDDD</p>
+                                        </div>
+                                        <div class="w3-quarter w3-center" style="background:#EEEEEE" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#000000">#EEEEEE</p>
+                                        </div>
+                                        <div class="w3-quarter w3-center" style="background:#FFFFFF" onclick="copy(this)">
+                                            <p class="w3-xxlarge" style="color:#000000">#FFFFFF</p>
+                                        </div>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 
