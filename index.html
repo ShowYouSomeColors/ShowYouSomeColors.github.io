@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<html>
+<script type="text/javascript">
+    function copy(e) {
+        var text = e.children[0].innerHTML;
+        showMessage('Copied Text: ' + text);
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'successful' : 'unsuccessful';
+            console.log('Fallback: Copying text command was ' + msg);
+        } catch (err) {
+            console.error('Fallback: Oops, unable to copy', err);
+        }
+
+        document.body.removeChild(textArea);
+    }
+    
+    function showMessage(text) {
+        var x = document.getElementById("snackbar");
+        x.innerHTML = text;
+        x.className = "show";
+        setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+    }
+</script>
+<style>
+    .w3-half {
+        height: 100px;
+        padding-top: 0
+    }
+
+    #snackbar {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
+    }
+
+    #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    @-webkit-keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+</style>
+
+<body>
+    <div class="w3-row">
+        <div class="w3-quarter w3-center" style="background:#000000" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#FFFFFF">#000000</p>
+        </div>
+        <div class="w3-quarter w3-center" style="background:#111111" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#FFFFFF">#111111</b>
+            </p>
+        </div>
+        <div class="w3-quarter w3-center" style="background:#222222" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#FFFFFF">#222222</p>
+        </div>
+        <div class="w3-quarter w3-center" style="background:#333333" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#FFFFFF">#333333</p>
+        </div>
+    </div>
+    <div class="w3-row">
+        <div class="w3-quarter w3-center" style="background:#444444" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#FFFFFF">#444444</p>
+        </div>
+        <div class="w3-quarter w3-center" style="background:#555555" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#FFFFFF">#555555</p>
+        </div>
+        <div class="w3-quarter w3-center" style="background:#666666" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#FFFFFF">#666666</p>
+        </div>
+        <div class="w3-quarter w3-center" style="background:#777777" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#FFFFFF">#777777</p>
+        </div>
+    </div>
+    <div class="w3-row">
+        <div class="w3-quarter w3-center" style="background:#888888" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#000000">#888888</p>
+        </div>
+        <div class="w3-quarter w3-center" style="background:#999999" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#000000">#999999</p>
+        </div>
+        <div class="w3-quarter w3-center" style="background:#AAAAAA" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#000000">#AAAAAA</p>
+        </div>
+        <div class="w3-quarter w3-center" style="background:#BBBBBB" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#000000">#BBBBBB</p>
+        </div>
+    </div>
+    <div class="w3-row">
+        <div class="w3-quarter w3-center" style="background:#CCCCCC" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#000000">#CCCCCC</p>
+        </div>
+        <div class="w3-quarter w3-center" style="background:#DDDDDD" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#000000">#DDDDDD</p>
+        </div>
+        <div class="w3-quarter w3-center" style="background:#EEEEEE" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#000000">#EEEEEE</p>
+        </div>
+        <div class="w3-quarter w3-center" style="background:#FFFFFF" onclick="copy(this)">
+            <p class="w3-xxlarge" style="color:#000000">#FFFFFF</p>
+        </div>
+    </div>
+
+    <div id="snackbar"></div>
+</body>
+
+</html>
