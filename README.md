@@ -1,2 +1,3 @@
 # ShowYouSomeColors
-Show You Some Colors
+ https://showyousomecolors.github.io/ 
+ 
